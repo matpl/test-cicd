@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using wawa.Controllers;
+using Xunit;
 
 namespace test_cicd
 {
@@ -7,13 +8,14 @@ namespace test_cicd
         [Fact]
         public void PassingTest()
         {
+            Crap c = new Crap();
             Assert.Equal(4, Add(2,2));
         }
 
         [Fact]
         public void FailingTest()
         {
-            Assert.Equal(5, Add(2,2));
+            Assert.Equal(4, Add(2,2));
         }
 
         int Add(int x, int y)

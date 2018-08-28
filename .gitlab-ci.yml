@@ -1,13 +1,13 @@
 image: docker:latest
 
 stages:
-  - build
+  - test
   
 build:
-  stage: build
+  stage: test
   services:
     - docker:dind
   script:
-    - docker build .
+    - docker build . -f test-cicd/Dockerfile
   tags:
     - docker
