@@ -1,9 +1,17 @@
 image: docker:latest
 
 stages:
+  - build
   - test
-  
+
 build:
+  stage: build
+  script:
+    - docker build . -f wawa/Dockerfile
+  tags:
+    - docker
+  
+test:
   stage: test
   services:
     - docker:dind
