@@ -9,7 +9,7 @@ namespace test_cicd
         public void PassingTest()
         {
             Crap c = new Crap();
-            Assert.Equal(5, Add(2,2));
+            Assert.Equal(5, Add(2,3));
         }
 
         [Fact]
